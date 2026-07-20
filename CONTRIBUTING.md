@@ -26,7 +26,8 @@ Cut from a release tag (e.g. `v1.2.0`) only when that version line needs a fix a
 
 - **Want a frozen, stable version, no surprises:** checkout a specific tag — `git checkout v1.2.0` — or download that version's Release asset. This version never changes underneath them.
 - **Want to stay current within an old supported line and auto-receive its bug fixes:** track the corresponding `release/x.x` branch instead of a tag — `git pull origin release/1.2.x` — and get every patch merged into that line without re-pinning each time.
-- **Want the latest overall, bleeding edge:** track `main` directly. No stability guarantee.
+- **Just want the newest stable release, no version number to think about:** use the "Latest" release — GitHub always flags the most recent non-prerelease release as "Latest" on the Releases page. It's also a stable, bookmarkable URL: `https://github.com/<org>/<repo>/releases/latest` (or `GET /repos/<org>/<repo>/releases/latest` via the API) — always resolves to whatever's currently newest, without needing to know the version number.
+- **Want the absolute bleeding edge:** track `main` directly. This is *not* the same as "latest stable" — `main` can include unreleased, in-progress, or untagged work. Only for people who specifically want that.
 
 ## How bug fixes get branched
 
